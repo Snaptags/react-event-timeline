@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { AutoSizer } from 'react-virtualized'
 import { storiesOf } from '@storybook/react'
 import { Timeline, TimelineEvent, TimelineBlip } from '../components/index'
 import Image from './sample.jpg'
@@ -297,32 +298,153 @@ storiesOf('Timeline', module)
   .add(
     'Title and Subtitle styling',
     () => (
-      <Timeline>
-        <TimelineEvent
-          title='John Doe sent a SMS'
-          subtitle='☞ Needs RSVP'
-          subtitleStyle={{ color: '#2962FF' }}
-          icon={<i className='material-icons md-18'>textsms</i>}
-          iconColor='#6fba1c'
-        >
+      <AutoSizer>
+        {({ height, width }) => (
+          <Timeline style={{ height: height, overflow: 'auto' }}>
+            <TimelineEvent
+              title='John Doe sent a SMS'
+              subtitle='☞ Needs RSVP'
+              subtitleStyle={{ color: '#2962FF' }}
+              icon={<i className='material-icons md-18'>textsms</i>}
+              iconColor='#6fba1c'
+            >
           I received the payment for $543. Should be shipping the item within a
           couple of hours. Thanks for the order!
-        </TimelineEvent>
-        <TimelineEvent
-          title='You sent an email to John Doe'
-          titleStyle={{ fontWeight: 'bold' }}
-          subtitle='✔ Mail delivered'
-          subtitleStyle={{ color: 'green' }}
-          icon={<i className='material-icons md-18'>email</i>}
-          iconColor='#03a9f4'
-        >
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>updates</i>}
+              iconColor='#03a9f4'
+            >
           Like we talked, you said that you would share the shipment details?
           This is an urgent order and so I am losing patience. Can you expedite
           the process and pls do share the details asap. Consider this a gentle
           reminder if you are on track already!
-        </TimelineEvent>
-      </Timeline>
-    ),
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>email</i>}
+              iconColor='#03a9f4'
+              collapsible='true'
+            >
+          Like we talked, you said that you would share the shipment details?
+          This is an urgent order and so I am losing patience. Can you expedite
+          the process and pls do share the details asap. Consider this a gentle
+          reminder if you are on track already!
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>email</i>}
+              iconColor='#03a9f4'
+            >
+          Like we talked, you said that you would share the shipment details?
+          This is an urgent order and so I am losing patience. Can you expedite
+          the process and pls do share the details asap. Consider this a gentle
+          reminder if you are on track already!
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>email</i>}
+              iconColor='#03a9f4'
+            >
+          Like we talked, you said that you would share the shipment details?
+          This is an urgent order and so I am losing patience. Can you expedite
+          the process and pls do share the details asap. Consider this a gentle
+          reminder if you are on track already!
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>email</i>}
+              iconColor='#03a9f4'
+            >
+          Like we talked, you said that you would share the shipment details?
+          This is an urgent order and so I am losing patience. Can you expedite
+          the process and pls do share the details asap. Consider this a gentle
+          reminder if you are on track already!
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>email</i>}
+              iconColor='#03a9f4'
+            >
+          Like we talked, you said that you would share the shipment details?
+          This is an urgent order and so I am losing patience. Can you expedite
+          the process and pls do share the details asap. Consider this a gentle
+          reminder if you are on track already!
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>email</i>}
+              iconColor='#03a9f4'
+            >
+          Like we talked, you said that you would share the shipment details?
+          This is an urgent order and so I am losing patience. Can you expedite
+          the process and pls do share the details asap. Consider this a gentle
+          reminder if you are on track already!
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>email</i>}
+              iconColor='#03a9f4'
+            >
+          Like we talked, you said that you would share the shipment details?
+          This is an urgent order and so I am losing patience. Can you expedite
+          the process and pls do share the details asap. Consider this a gentle
+          reminder if you are on track already!
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>email</i>}
+              iconColor='#03a9f4'
+            >
+          Like we talked, you said that you would share the shipment details?
+          This is an urgent order and so I am losing patience. Can you expedite
+          the process and pls do share the details asap. Consider this a gentle
+          reminder if you are on track already!
+            </TimelineEvent>
+            <TimelineEvent
+              title='You sent an email to John Doe'
+              titleStyle={{ fontWeight: 'bold' }}
+              subtitle='✔ Mail delivered'
+              subtitleStyle={{ color: 'green' }}
+              icon={<i className='material-icons md-18'>email</i>}
+              iconColor='#03a9f4'
+            >
+          Like we talked, you said that you would share the shipment details?
+          This is an urgent order and so I am losing patience. Can you expedite
+          the process and pls do share the details asap. Consider this a gentle
+          reminder if you are on track already!
+            </TimelineEvent>
+          </Timeline>
+        )}
+      </AutoSizer>),
     { info: 'Add your own title and subtitle to events' }
   )
   .add(
